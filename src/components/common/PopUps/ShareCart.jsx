@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import img from "@/assets/B2C/images/Popups/Productshare.svg";
+// import img from "@/assets/B2C/images/Popups/Productshare.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCopy,
@@ -7,7 +7,7 @@ import {
   faTimes,
   faEnvelope,
   faShareAlt,
-  faPaperPlane,
+  // faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faWhatsapp,

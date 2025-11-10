@@ -20,7 +20,10 @@ export const setupRecaptcha = (containerId = "recaptcha-container") => {
       "expired-callback": () => {
         console.warn("reCAPTCHA expired");
         recaptchaVerifier?.render().then((widgetId) => {
-          grecaptcha.reset(widgetId);
+          // grecaptcha.reset(widgetId);
+          console.log("THe widget id is", widgetId);
+          
+          
         });
       },
     }
@@ -39,7 +42,10 @@ export const sendOtp = async (phoneNumber) => {
     return confirmationResult;
   } catch (error) {
     // Auto-reset reCAPTCHA on error
-    recaptchaVerifier.render().then((widgetId) => grecaptcha.reset(widgetId));
+      //   recaptchaVerifier.render().then((widgetId) => 
+      //     grecaptcha.reset(widgetId)
+      // );
+    console.error("Error sending OTP:", error);
     throw error;
   }
 };

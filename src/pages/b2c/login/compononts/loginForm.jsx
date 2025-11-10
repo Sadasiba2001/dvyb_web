@@ -28,6 +28,7 @@ const LoginForm = ({ onOtpSent, onGuest }) => {
       const confirmation = await sendOtp(phoneNumber);
       onOtpSent(confirmation, mobile);
     } catch (error) {
+      console.error("Failed to send OTP:", error);
       alert("Failed to send OTP. Try again.");
     } finally {
       setLoading(false);

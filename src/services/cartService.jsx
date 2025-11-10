@@ -54,10 +54,11 @@ class CartOperationalService {
   }
 
   /** Add items to cart */
+  /** Add items to cart */
   async addToCart(productId, productData = {}, quantity = 1) {
     try {
-      // const user = this.auth.currentUser;
-      // if (!user) throw new Error("User must be authenticated");
+      const user = this.auth.currentUser; // ✅ Add this line
+      if (!user) throw new Error("User must be authenticated");
 
       const userCollection = await this.getUserCollection(user.uid);
       const cartItemRef = doc(this.db, userCollection, user.uid, "cart", productId);
@@ -88,10 +89,10 @@ class CartOperationalService {
   }
 
   /** Remove item from cart */
+  /** Remove item from cart */
   async removeFromCart(productId) {
     try {
-      // const user = this.auth.currentUser;
-       const user = true;
+      const user = this.auth.currentUser; // ✅ Use this instead of `const user = true;`
       if (!user) throw new Error("User must be authenticated");
 
       const userCollection = await this.getUserCollection(user.uid);
@@ -135,7 +136,7 @@ class CartOperationalService {
       const user = this.auth.currentUser;
       if (!user) {
         callback([]);
-        return () => {};
+        return () => { };
       }
 
       const userCollection = await this.getUserCollection(user.uid);
@@ -161,7 +162,7 @@ class CartOperationalService {
     } catch (error) {
       console.error("❌ Error setting up cart listener:", error);
       callback([]);
-      return () => {};
+      return () => { };
     }
   }
 

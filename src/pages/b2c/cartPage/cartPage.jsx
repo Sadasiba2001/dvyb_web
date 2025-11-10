@@ -6,7 +6,7 @@ import {
 } from "../../../services/cartService";
 import { wishlistService } from "../../../services/wishlistService";
 import { useNavigate } from "react-router-dom";
-import {mainlogo} from "@/assets"
+// import {mainlogo} from "@/assets"
 
 function CartPage() {
   const [cartItems, setCartItems] = useState([]);
@@ -90,7 +90,7 @@ function CartPage() {
     const newQuantity = (item.quantity || 1) + delta;
     if (newQuantity < 1) return;
     try {
-      await updateCartItemQuantity(item.id, newQuantity);
+      await cartService.updateCartItemQuantity(item.id, newQuantity);
     } catch (error) {
       console.error("Error updating quantity:", error);
       alert("Failed to update quantity.");

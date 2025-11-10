@@ -1,5 +1,5 @@
 import React from 'react';
-import { spotLight , closet01, coll01, coll02, coll03, coll04, coll05, coll06 } from "@/assets";
+import { spotLight , coll01, coll02, coll03, coll04, coll05, coll06 } from "@/assets";
 
 const CollectionCard = ({ image, title }) => (
   <div className="group cursor-pointer">

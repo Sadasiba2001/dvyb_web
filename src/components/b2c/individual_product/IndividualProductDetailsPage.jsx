@@ -29,9 +29,9 @@ const IndividualProductDetailsPage = () => {
    */
   const { id } = useParams();
   const { products, loading, error } = useProducts();
-   const [addingToCart, setAddingToCart] = useState(false);
-   const user = true
-   
+  const [addingToCart, setAddingToCart] = useState(false);
+  //  const user = true
+
 
   /**
    * Handle loading and error states
@@ -53,10 +53,10 @@ const IndividualProductDetailsPage = () => {
    */
   const imageUrls = product.imageUrls?.length ? product.imageUrls : ["/placeholder.jpg"];
 
-  
+
   const handleonBuyNow = async (event) => {
     event.stopPropagation();
-    
+
     // if (!user) {
     //   toast.error("Please log in to add items to cart!");
     //   return;
@@ -81,10 +81,10 @@ const IndividualProductDetailsPage = () => {
 
       await cartService.addToCart(product.id, productData, 1);
       // toast.success(`${productData.name} added to cart!`);
-      showPopup("cart", {
-  title: productData.name || productData.title,
-  image: productData.imageUrls?.[0],
-});
+      // showPopup("cart", {
+      //   title: productData.name || productData.title,
+      //   image: productData.imageUrls?.[0],
+      // });
     } catch (error) {
       console.error("Error adding to cart:", error);
       // toast.error("Failed to add item to cart. Please try again.");
@@ -117,7 +117,7 @@ const IndividualProductDetailsPage = () => {
           />
           <ProductStockAndShipping />
           <ProductActionButtons
-            onAddToBag={(e) => handleonBuyNow(e) }
+            onAddToBag={(e) => handleonBuyNow(e)}
             onBuyNow={() => console.log("Add to bag")}
             onVirtualTryOn={() => console.log("Try on")}
           />

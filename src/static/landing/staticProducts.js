@@ -2,7 +2,7 @@
 // Static data for testing homepage sections
 // Use in useProducts hook: return { products: staticProducts, loading: false, error: null }
 
-import { closet01, img01, img02, img03, lux01, lux02, lux03, lux04, best01, best02, img04, img05, img06, closet05, closet02, closet03, closet04 } from "@/assets";
+import { closet01, img01, img02, img03, lux01, lux03, lux04, best01, best02, img04, img05, img06, closet05, closet02, closet03, closet04 } from "@/assets";
 
 console.log(img01); 
  const staticProducts = [

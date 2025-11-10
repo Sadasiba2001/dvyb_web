@@ -1,6 +1,6 @@
-import React from "react";
-import logo from "@/assets/B2C/images/FAQ/Logo.svg";
-import logoName from "@/assets/B2C/images/FAQ/LogoName.svg";
+// import React from "react";
+// import logo from "@/assets/B2C/images/FAQ/Logo.svg";
+// import logoName from "@/assets/B2C/images/FAQ/LogoName.svg";
 export default function TermsAndConditions() {
   return (
     <div className=" bg-white flex flex-col mt-34 items-center  mx-12 ">

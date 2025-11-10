@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faWhatsapp,
-  faFacebookF,
+  // faFacebookF,
   faInstagram,
   faTelegramPlane,
   faSnapchat,
-  faGoogle,
+  // faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
 import { faCopy, faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Model from "@/assets/B2C/images/Popups/Model.svg";

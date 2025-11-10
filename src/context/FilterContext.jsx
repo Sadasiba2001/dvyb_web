@@ -1,5 +1,5 @@
 // src/context/FilterContext.jsx
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 const FilterContext = createContext();
 

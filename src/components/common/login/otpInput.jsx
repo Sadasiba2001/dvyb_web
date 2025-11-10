@@ -36,7 +36,7 @@ const OtpInput = ({
   length = 6,
   onComplete,
   disabled = false,
-  error = false,
+  // error = false,
   autoFocus = true,
 }) => {
   const inputsRef = useRef([]);

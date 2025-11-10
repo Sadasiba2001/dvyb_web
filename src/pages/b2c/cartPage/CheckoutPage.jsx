@@ -93,7 +93,7 @@ export default function CheckoutPage() {
       setCityArray(cities);
     } else setCityArray([]);
     setShippingForm((p) => ({ ...p, city: "" }));
-  }, [shippingForm.state]);
+  }, [shippingForm.country, shippingForm.state]);
 
   // Subscribe to cart updates
   // useEffect(() => {
@@ -244,11 +244,9 @@ export default function CheckoutPage() {
           id: Date.now(),
           type: "Shipping",
           name: `${shippingForm.firstName} ${shippingForm.lastName}`,
-          details: `${shippingForm.streetAddress}${
-            shippingForm.city ? ", " + shippingForm.city : ""
-          }${shippingForm.state ? ", " + shippingForm.state : ""}${
-            shippingForm.postalCode ? " - " + shippingForm.postalCode : ""
-          }${shippingForm.country ? ", " + shippingForm.country : ""}`,
+          details: `${shippingForm.streetAddress}${shippingForm.city ? ", " + shippingForm.city : ""
+            }${shippingForm.state ? ", " + shippingForm.state : ""}${shippingForm.postalCode ? " - " + shippingForm.postalCode : ""
+            }${shippingForm.country ? ", " + shippingForm.country : ""}`,
           phone: shippingForm.phone,
           isShipping: true,
           createdAt: new Date().toISOString(),
@@ -422,7 +420,7 @@ export default function CheckoutPage() {
               await clearCart();
               alert(
                 "Payment successful! Order ID: " +
-                  (verifyRes.data.orderId || rzpOrder.id)
+                (verifyRes.data.orderId || rzpOrder.id)
               );
               navigate("/");
             } else {
@@ -436,9 +434,8 @@ export default function CheckoutPage() {
           }
         },
         prefill: {
-          name: `${shippingForm.firstName || ""} ${
-            shippingForm.lastName || ""
-          }`.trim(),
+          name: `${shippingForm.firstName || ""} ${shippingForm.lastName || ""
+            }`.trim(),
           email: email || (user && user.email) || "",
           contact: shippingForm.phone || "",
         },
@@ -526,7 +523,7 @@ export default function CheckoutPage() {
                 )}
               </div>
               {openStep === 1 && (
-                
+
                 <div className="p-6 space-y-6">
                   {/* ✅ Row with both texts side-by-side */}
                   <div className="flex justify-between items-center">
@@ -714,37 +711,33 @@ export default function CheckoutPage() {
                   <div className="grid grid-cols-2 gap-4">
                     <button
                       onClick={() => setPaymentMethod("cod")}
-                      className={`border border-gray-300 py-4 rounded-sm uppercase ${
-                        paymentMethod === "cod" ? "bg-[#800000] text-white" : ""
-                      }`}
+                      className={`border border-gray-300 py-4 rounded-sm uppercase ${paymentMethod === "cod" ? "bg-[#800000] text-white" : ""
+                        }`}
                     >
                       Cash on Delivery
                     </button>
                     <button
                       onClick={() => setPaymentMethod("card")}
-                      className={`border border-gray-300 py-4 rounded-sm uppercase ${
-                        paymentMethod === "card"
-                          ? "bg-[#800000] text-white"
-                          : ""
-                      }`}
+                      className={`border border-gray-300 py-4 rounded-sm uppercase ${paymentMethod === "card"
+                        ? "bg-[#800000] text-white"
+                        : ""
+                        }`}
                     >
                       Credit / Debit Card
                     </button>
                     <button
                       onClick={() => setPaymentMethod("netbank")}
-                      className={`border border-gray-300 py-4 rounded-sm uppercase ${
-                        paymentMethod === "netbank"
-                          ? "bg-[#800000] text-white"
-                          : ""
-                      }`}
+                      className={`border border-gray-300 py-4 rounded-sm uppercase ${paymentMethod === "netbank"
+                        ? "bg-[#800000] text-white"
+                        : ""
+                        }`}
                     >
                       Net Banking
                     </button>
                     <button
                       onClick={() => setPaymentMethod("upi")}
-                      className={`border border-gray-300 py-4 rounded-sm uppercase ${
-                        paymentMethod === "upi" ? "bg-[#800000] text-white" : ""
-                      }`}
+                      className={`border border-gray-300 py-4 rounded-sm uppercase ${paymentMethod === "upi" ? "bg-[#800000] text-white" : ""
+                        }`}
                     >
                       UPI
                     </button>

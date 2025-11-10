@@ -13,7 +13,8 @@ export default function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const [showLogin, setShowLogin] = useState(false); 
 
   const isLoggedIn = false;
   const wishlistCount = 3;
@@ -61,7 +62,7 @@ export default function Navbar() {
               onWishlist={() => handleProtected("/wishlist")}
               onCart={() => handleProtected("/cart")}
               // onProfile={() => handleProtected("/profile")}
-              onProfile={() => handleProtected(true)}
+              onProfile={() => setShowLogin(true)}
             />
           </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import Banner from "@/assets/B2C/images/MainBlog/Banner.jpg";
 import red from "@/assets/B2C/images/MainBlog/Red.svg";
 import bride from "@/assets/B2C/images/MainBlog/Bride.svg";

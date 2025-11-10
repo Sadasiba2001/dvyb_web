@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const ProductDescriptionSection = ({ product }) => {
-  const { description, code, supplier } = product || {};
+  const { description, code } = product || {};
   const [expanded, setExpanded] = useState(false);
 
   const toggleExpand = () => setExpanded(!expanded);

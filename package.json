@@ -12,7 +12,8 @@
     "clean:hard": "rimraf node_modules dist .vite && npm cache clean --force",
     "lint": "eslint src --ext .js,.jsx",
     "format:check": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^7.1.0",
@@ -45,7 +46,9 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
     "globals": "^16.4.0",
+    "husky": "^9.1.7",
     "prettier": "^3.6.2",
-    "vite": "^7.1.7"
+    "vite": "^7.1.7",
+    "vite-plugin-checker": "^0.11.0"
   }
 }
