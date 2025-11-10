@@ -1,5 +1,5 @@
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import ProductCard from "../../product/productCard";
+import ProductCard from "../products/ProductCard";
 import { scrollLeft, scrollRight } from "../../utils/scroll";
 import { luxIcon } from "@/assets";
 
