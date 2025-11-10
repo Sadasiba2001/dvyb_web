@@ -1,7 +1,7 @@
 // components/navbar/SearchDropdown.jsx
 import { FaSearch } from "react-icons/fa";
 import CategoryCard from "./CategoryCard";
-import ProductCard from "../../product/productCard";
+import ProductCard from "../../b2c/products/ProductCard";
 
 const browseCategories = [ /* your data */ ];
 const trendingProducts = [ /* your data */ ];
