@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import WomenwearRoute from "./WomenwearRoute";
-// import IndividualProductDetailsPage from "../components/B2C/individual_product/IndividualProductDetailsPage";
+// import IndividualProductDetailsPage from "../components/b2c/individual_product/IndividualProductDetailsPage";
 import ProductLayout from "../layout/ProductLayout";
 import MainLayout from "../layout/mainLayout";
 import { useProducts } from "../hooks/useProducts";
-import ProductDetailsPageIndividual from "../pages/B2C/ProductDetailsPageIndividual";
-import Home from "../pages/B2C/homePage/homePage";
+import ProductDetailsPageIndividual from "../pages/b2c/ProductDetailsPageIndividual";
+import Home from "../pages/b2c/homePage/homePage";
 import BlogPage from "../components/common/BlogPage/BlogPage";
 import MainBlog from "../components/common/BlogPage/MainBlog";
 import SingleMainBlog from "../components/common/BlogPage/singleBlogMain";
@@ -15,7 +15,7 @@ import PrivacyPolicy from "../components/common/PrivacyPolicy/PrivacyPolicy";
 import ReturnExchangePolicy from "../components/common/Returnpolicy/ReturnPolicy";
 import SingleBlog from "../components/common/SingleBlog/SingleBlog";
 import TermsAndConditions from "../components/common/TermsAndCondtions/TermsAndConditions";
-import CartPage from "../pages/B2C/cartPage/cartPage";
+import CartPage from "../pages/b2c/cartPage/cartPage";
 
 export default function AppRoutes() {
   const { products, loading, error } = useProducts();
@@ -189,7 +189,7 @@ export default function AppRoutes() {
 
 // import { Routes, Route } from "react-router-dom";
 // import WomenwearRoute from "./WomenwearRoute";
-// import IndividualProductDetailsPage from "../components/B2C/individual_product/IndividualProductDetailsPage";
+// import IndividualProductDetailsPage from "../components/b2c/individual_product/IndividualProductDetailsPage";
 
 // export default function AppRoutes() {
 //   return (

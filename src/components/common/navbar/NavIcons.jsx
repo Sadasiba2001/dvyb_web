@@ -1,5 +1,5 @@
 // components/navbar/NavIcons.jsx
-import LoginModal from "../../../pages/B2C/login/loginModel";
+import LoginModal from "../../../pages/b2c/login/loginModel";
 
 // components/navbar/NavIcons.jsx
 export default function NavIcons({ wishlistCount, cartCount, onSearch, onWishlist, onCart, onProfile }) {

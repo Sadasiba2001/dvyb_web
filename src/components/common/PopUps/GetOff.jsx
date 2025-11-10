@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Login from "@/assets/B2C/images/Popups/Login.svg"
+import Login from "@/assets/b2c/images/Popups/Login.svg"
 
 export default function GetOff() {
   const [email, setEmail] = useState('');

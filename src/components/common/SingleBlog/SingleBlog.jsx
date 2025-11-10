@@ -1,11 +1,11 @@
 import React from 'react';
 import {ChevronLeft, ChevronRight } from 'lucide-react';
-import Diwali from '@/assets/B2C/images/SingleBlog/Diwali.svg'
-import Blue from '@/assets/B2C/images/SingleBlog/Blue.svg'
-import Green from '@/assets/B2C/images/SingleBlog/Green.svg'
-import red from '@/assets/B2C/images/SingleBlog/red.svg'
-import orange from '@/assets/B2C/images/SingleBlog/Orange.svg'
-import red2 from '@/assets/B2C/images/SingleBlog/red2.svg'
+import Diwali from '@/assets/b2c/images/SingleBlog/Diwali.svg'
+import Blue from '@/assets/b2c/images/SingleBlog/Blue.svg'
+import Green from '@/assets/b2c/images/SingleBlog/Green.svg'
+import red from '@/assets/b2c/images/SingleBlog/red.svg'
+import orange from '@/assets/b2c/images/SingleBlog/Orange.svg'
+import red2 from '@/assets/b2c/images/SingleBlog/red2.svg'
 
 
 export default function SingleBlog() {

@@ -1,4 +1,4 @@
-import { HeroSection, BrandStory, MissionVision, CoreValues } from "../../components/B2C/about";
+import { HeroSection, BrandStory, MissionVision, CoreValues } from "../../components/b2c/about";
 
 export default function AboutPage() {
   return (

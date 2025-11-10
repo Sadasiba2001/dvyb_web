@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Heart, Star } from "lucide-react";
-import Bag_ic from '@/assets/B2C/images/commmon/bag_ic.svg';
+import Bag_ic from '@/assets/b2c/images/commmon/bag_ic.svg';
 import { useNavigate } from "react-router-dom";
 
 import { cartService } from "../../services/cartService";

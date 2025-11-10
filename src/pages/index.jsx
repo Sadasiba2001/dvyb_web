@@ -1,3 +1,3 @@
 export 
 // { default as ProductListingPage } 
-* from "./B2C";
+* from "./b2c";

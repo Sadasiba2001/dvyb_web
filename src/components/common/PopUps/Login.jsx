@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import LoginBanner from "@/assets/B2C/images/MainBlog/Banner.jpg";
-import CloseModal from "@/assets/B2C/images/MainBlog/CloseModal.png";
+import LoginBanner from "@/assets/b2c/images/MainBlog/Banner.jpg";
+import CloseModal from "@/assets/b2c/images/MainBlog/CloseModal.png";
 
 const Login = () => {
   const [isOpen, setIsOpen] = useState(true);

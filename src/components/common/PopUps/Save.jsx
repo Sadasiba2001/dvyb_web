@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import save from "@/assets/B2C/images/Popups/save.svg";
+import save from "@/assets/b2c/images/Popups/save.svg";
 const Save = () => {
   const [isOpen, setIsOpen] = useState(true);
 

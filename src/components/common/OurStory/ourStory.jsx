@@ -9,11 +9,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faHandsHelping, faGem, faUsers, faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
-import bannerImg from "@/assets/B2C/images/OurStory/Banner.svg";
-import redSaree from "@/assets/B2C/images/OurStory/redSaree.svg";
-import pinkSaree from "@/assets/B2C/images/OurStory/pinkSaree.svg";
-import bride from "@/assets/B2C/images/OurStory/bride.svg";
-import hand from "@/assets/B2C/images/OurStory/hand.svg";
+import bannerImg from "@/assets/b2c/images/OurStory/Banner.svg";
+import redSaree from "@/assets/b2c/images/OurStory/redSaree.svg";
+import pinkSaree from "@/assets/b2c/images/OurStory/pinkSaree.svg";
+import bride from "@/assets/b2c/images/OurStory/bride.svg";
+import hand from "@/assets/b2c/images/OurStory/hand.svg";
 
 const ourStory = () => {
   const socialIcons = [

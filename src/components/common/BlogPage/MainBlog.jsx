@@ -1,14 +1,14 @@
 import React from "react";
-import SingleBanner from "@/assets/B2C/images/MainBlog/SingleBanner.png"
-import Bride from "@/assets/B2C/images/MainBlog/BrideImageMain.svg"
-import GreenSaree from "@/assets/B2C/images/MainBlog/Green.png"
-import bride from "@/assets/B2C/images/MainBlog/Bride.svg";
-import RedSaree from "@/assets/B2C/images/MainBlog/RedSaree.png"
-import Blue from '@/assets/B2C/images/SingleBlog/Blue.svg'
-import Green from '@/assets/B2C/images/SingleBlog/Green.svg'
-import red from '@/assets/B2C/images/SingleBlog/red.svg'
-import orange from '@/assets/B2C/images/SingleBlog/Orange.svg'
-import red2 from '@/assets/B2C/images/SingleBlog/red2.svg'
+import SingleBanner from "@/assets/b2c/images/MainBlog/SingleBanner.png"
+import Bride from "@/assets/b2c/images/MainBlog/BrideImageMain.svg"
+import GreenSaree from "@/assets/b2c/images/MainBlog/Green.png"
+import bride from "@/assets/b2c/images/MainBlog/Bride.svg";
+import RedSaree from "@/assets/b2c/images/MainBlog/RedSaree.png"
+import Blue from '@/assets/b2c/images/SingleBlog/Blue.svg'
+import Green from '@/assets/b2c/images/SingleBlog/Green.svg'
+import red from '@/assets/b2c/images/SingleBlog/red.svg'
+import orange from '@/assets/b2c/images/SingleBlog/Orange.svg'
+import red2 from '@/assets/b2c/images/SingleBlog/red2.svg'
 const MainBlog = () => {
   // Array of images - you can replace these URLs with your actual image links
   const heroImages = [Bride,GreenSaree,bride,RedSaree];

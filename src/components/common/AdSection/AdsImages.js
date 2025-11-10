@@ -1,12 +1,12 @@
-// src/components/B2C/ads/AdsImages.js
+// src/components/b2c/ads/AdsImages.js
 // This file contains all the static image imports
 
-import ad1 from '@/assets/B2C/ads/Ad_1.png';
-import ad2 from '@/assets/B2C/ads/Ad_2.png';
-import ad3 from '@/assets/B2C/ads/Ad_3.png';
-import ad4 from '@/assets/B2C/ads/Ad_4.png';
-import ad5 from '@/assets/B2C/ads/Ad_5.png';
-import ad6 from '@/assets/B2C/ads/Ad_6.png';
+import ad1 from '@/assets/b2c/ads/Ad_1.png';
+import ad2 from '@/assets/b2c/ads/Ad_2.png';
+import ad3 from '@/assets/b2c/ads/Ad_3.png';
+import ad4 from '@/assets/b2c/ads/Ad_4.png';
+import ad5 from '@/assets/b2c/ads/Ad_5.png';
+import ad6 from '@/assets/b2c/ads/Ad_6.png';
 
 // Export the ads array
 export const ads = [

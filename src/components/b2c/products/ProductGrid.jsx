@@ -1,4 +1,4 @@
-// src/components/B2C/products/ProductGrid.jsx
+// src/components/b2c/products/ProductGrid.jsx
 import { useState } from 'react';
 import { useProductFilter } from '../../../hooks/useProductFilter';
 import ProductCard from './ProductCard';

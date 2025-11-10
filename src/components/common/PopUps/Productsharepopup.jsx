@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import img from "@/assets/B2C/images/Popups/Productshare.svg"
+import img from "@/assets/b2c/images/Popups/Productshare.svg"
 import { Copy, Check, MessageCircle, Mail, Instagram, Share2, Facebook, Send, X } from 'lucide-react';
 
 export default function ShareModal() {

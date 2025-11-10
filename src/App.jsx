@@ -29,8 +29,8 @@ export default App;
 
 // // src/App.jsx
 // // import Footer from "./components/"
-// import ProductGrid from "./components/B2C/products/ProductGrid";
-// import Sidebar from "./components/B2C/sidebar/Sidebar";
+// import ProductGrid from "./components/b2c/products/ProductGrid";
+// import Sidebar from "./components/b2c/sidebar/Sidebar";
 // import { FilterProvider } from "./context/FilterContext";
 // import { useProducts } from "./hooks/useProducts";
 // import AdsCarousel from "./components/common/AdSection/AdsCarousel";

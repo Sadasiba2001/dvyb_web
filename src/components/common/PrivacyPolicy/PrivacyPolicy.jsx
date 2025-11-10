@@ -1,6 +1,6 @@
 // import React from 'react';
-// import logo from '@/assets/B2C/images/FAQ/Logo.svg';
-// import logoName from '@/assets/B2C/images/FAQ/LogoName.svg';
+// import logo from '@/assets/b2c/images/FAQ/Logo.svg';
+// import logoName from '@/assets/b2c/images/FAQ/LogoName.svg';
 
 
 export default function PrivacyPolicy() {

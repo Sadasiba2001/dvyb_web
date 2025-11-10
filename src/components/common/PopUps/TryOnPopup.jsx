@@ -9,7 +9,7 @@ import {
   // faGoogle,
 } from "@fortawesome/free-brands-svg-icons";
 import { faCopy, faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
-import Model from "@/assets/B2C/images/Popups/Model.svg";
+import Model from "@/assets/b2c/images/Popups/Model.svg";
 
 export default function ShareModal() {
   const [copied, setCopied] = useState(false);

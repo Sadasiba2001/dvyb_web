@@ -1,4 +1,4 @@
-import wishlistImage from "@/assets/B2C/images/wishlist/wishlist.png";
+import wishlistImage from "@/assets/b2c/images/wishlist/wishlist.png";
 
 const EmptyWishlistState = () => {
   return (

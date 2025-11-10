@@ -1,7 +1,7 @@
 // src/hooks/useProducts.js
 import { useEffect, useState, useCallback } from "react";
 import { productService } from "../services/firebaseServices";
-import { Product } from "../models/B2CProductModel"; 
+import { Product } from "../models/b2cProductModel"; 
 
 export function useProducts() {
   const [state, setState] = useState({

@@ -1,4 +1,4 @@
-// src/components/B2C/filters/ColorFilter.jsx
+// src/components/b2c/filters/ColorFilter.jsx
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useFilter } from '../../../context/FilterContext';

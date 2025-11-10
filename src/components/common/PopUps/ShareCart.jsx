@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import img from "@/assets/B2C/images/Popups/Productshare.svg";
+// import img from "@/assets/b2c/images/Popups/Productshare.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCopy,

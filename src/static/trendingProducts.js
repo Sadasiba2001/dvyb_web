@@ -1,4 +1,4 @@
-import TrendingImage from "@/assets/B2C/images/empty_cart/trending.png";
+import TrendingImage from "@/assets/b2c/images/empty_cart/trending.png";
 
 export const trendingProducts = [
   {

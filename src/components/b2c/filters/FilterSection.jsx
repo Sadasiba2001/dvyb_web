@@ -1,4 +1,4 @@
-// src/components/B2C/filters/FilterSection.jsx
+// src/components/b2c/filters/FilterSection.jsx
 import { useState } from 'react';
 import { Search, ChevronDown, ChevronUp } from 'lucide-react';
 import { useFilter } from '../../../context/FilterContext';

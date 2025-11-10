@@ -1,4 +1,4 @@
-import { MainLayout, SidebarFilters, ProductGrid } from '../../components/B2C';
+import { MainLayout, SidebarFilters, ProductGrid } from '../../components/b2c';
 
 const ProductListingPage = () => {
   return (

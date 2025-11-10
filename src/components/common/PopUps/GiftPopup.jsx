@@ -1,5 +1,5 @@
 import React from "react";
-import GiftPopupimg from "@/assets/B2C/images/GiftPopUp/GiftPopUp.svg"
+import GiftPopupimg from "@/assets/b2c/images/GiftPopUp/GiftPopUp.svg"
 
 const GiftPopup = () => {
   return (

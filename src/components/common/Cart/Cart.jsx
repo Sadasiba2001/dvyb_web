@@ -1,7 +1,7 @@
 // import React, { useEffect, useState } from "react";
 // import { useNavigate } from "react-router-dom";
 // import { subscribeToCart, clearCart } from "../../services/CartService";
-// import b2clogo from "../@/assets/Navbar/B2cLogo.png";
+// import b2clogo from "../@/assets/Navbar/b2cLogo.png";
 
 
 // export default function CheckoutPage() {

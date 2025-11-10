@@ -1,4 +1,4 @@
-import aboutBg from "@/assets/B2C/images/about/aboutPageBg.png";
+import aboutBg from "@/assets/b2c/images/about/aboutPageBg.png";
 
 export default function HeroSection() {
   return (

@@ -1,15 +1,15 @@
 // import React, { useState } from "react";
-import Banner from "@/assets/B2C/images/MainBlog/Banner.jpg";
-import red from "@/assets/B2C/images/MainBlog/Red.svg";
-import bride from "@/assets/B2C/images/MainBlog/Bride.svg";
-import saree from "@/assets/B2C/images/MainBlog/Saree.svg";
-import silk from "@/assets/B2C/images/MainBlog/silk.svg";
-import Hand from "@/assets/B2C/images/MainBlog/Hand.svg";
-import women from "@/assets/B2C/images/MainBlog/women.svg";
-import Lehanga from "@/assets/B2C/images/MainBlog/Lehanga.svg";
-import LehangaStyle1 from "@/assets/B2C/images/MainBlog/Lehangastyle.svg";
-import Anarkali from "@/assets/B2C/images/MainBlog/Anarkali.svg";
-import kurta from "@/assets/B2C/images/MainBlog/kurta.svg";
+import Banner from "@/assets/b2c/images/MainBlog/Banner.jpg";
+import red from "@/assets/b2c/images/MainBlog/Red.svg";
+import bride from "@/assets/b2c/images/MainBlog/Bride.svg";
+import saree from "@/assets/b2c/images/MainBlog/Saree.svg";
+import silk from "@/assets/b2c/images/MainBlog/silk.svg";
+import Hand from "@/assets/b2c/images/MainBlog/Hand.svg";
+import women from "@/assets/b2c/images/MainBlog/women.svg";
+import Lehanga from "@/assets/b2c/images/MainBlog/Lehanga.svg";
+import LehangaStyle1 from "@/assets/b2c/images/MainBlog/Lehangastyle.svg";
+import Anarkali from "@/assets/b2c/images/MainBlog/Anarkali.svg";
+import kurta from "@/assets/b2c/images/MainBlog/kurta.svg";
 
 // Image constants - Replace these URLs with your actual images
 const IMAGES = {

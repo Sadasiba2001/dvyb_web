@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Phone, MessageCircle, ChevronDown } from "lucide-react";
 
-import brdialImage from "@/assets/B2C/images/FAQ/birdal.svg";
-import logoImage from "@/assets/B2C/images/FAQ/Logo.svg";
-import LogoName from "@/assets/B2C/images/FAQ/LogoName.svg";
+import brdialImage from "@/assets/b2c/images/FAQ/birdal.svg";
+import logoImage from "@/assets/b2c/images/FAQ/Logo.svg";
+import LogoName from "@/assets/b2c/images/FAQ/LogoName.svg";
 
 const FaqPage = () => {
   const faqs = [

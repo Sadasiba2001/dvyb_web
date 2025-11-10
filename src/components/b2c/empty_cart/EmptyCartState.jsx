@@ -1,4 +1,4 @@
-import cartImage from "@/assets/B2C/images/empty_cart/cart.png";
+import cartImage from "@/assets/b2c/images/empty_cart/cart.png";
 
 const EmptyCartState = () => {
   return (

@@ -1,5 +1,5 @@
-import redSaree from "@/assets/B2C/images/about/redSaree.png";
-import saree2 from "@/assets/B2C/images/about/saree2.png";
+import redSaree from "@/assets/b2c/images/about/redSaree.png";
+import saree2 from "@/assets/b2c/images/about/saree2.png";
 
 export default function BrandStory() {
   return (

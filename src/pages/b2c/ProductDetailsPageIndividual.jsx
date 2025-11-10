@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import SimilarProductsSection from "../../components/B2C/similar_product/SimilarProductsSection";
-import IndividualProduct from "../../components/B2C/individual_product/IndividualProductDetailsPage";
-import TrendingProductsSection from "../../components/B2C/trending_product/TrendingProductsSection";
+import SimilarProductsSection from "../../components/b2c/similar_product/SimilarProductsSection";
+import IndividualProduct from "../../components/b2c/individual_product/IndividualProductDetailsPage";
+import TrendingProductsSection from "../../components/b2c/trending_product/TrendingProductsSection";
 
 const ProductDetailsPageIndividual = () => {
   const { id } = useParams();

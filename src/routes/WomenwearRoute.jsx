@@ -1,4 +1,4 @@
-import ProductGrid from "../components/B2C/products/ProductGrid";
+import ProductGrid from "../components/b2c/products/ProductGrid";
 
 export default function WomenwearRoute({ products }) {
   return <ProductGrid products={products} />;
@@ -12,9 +12,9 @@ export default function WomenwearRoute({ products }) {
 
 
 // import { useProducts } from '../hooks';
-// // import { PremiumSection05 } from '../components/B2C';
+// // import { PremiumSection05 } from '../components/b2c';
 // import MainLayout from '../layout';
-// import {ProductGrid} from '../components/B2C/products';
+// import {ProductGrid} from '../components/b2c/products';
 
 // const WomenwearRoute = () => {
 //     const { products, loading, error } = useProducts();

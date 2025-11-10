@@ -1,4 +1,4 @@
-import TrendingImage from "@/assets/B2C/images/wishlist/trending.png";
+import TrendingImage from "@/assets/b2c/images/wishlist/trending.png";
 
 export const trendingWishlistProducts = [
   {

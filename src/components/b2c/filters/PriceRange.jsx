@@ -1,4 +1,4 @@
-// src/components/B2C/filters/PriceRange.jsx
+// src/components/b2c/filters/PriceRange.jsx
 import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useFilter } from '../../../context/FilterContext';
