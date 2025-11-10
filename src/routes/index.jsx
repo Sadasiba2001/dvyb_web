@@ -13,8 +13,8 @@ import PrivacyPolicy from "../components/common/PrivacyPolicy/PrivacyPolicy";
 import ReturnExchangePolicy from "../components/common/Returnpolicy/ReturnPolicy";
 import SingleBlog from "../components/common/SingleBlog/SingleBlog";
 import TermsAndConditions from "../components/common/TermsAndCondtions/TermsAndConditions";
-import CartPage from "../pages/B2C/cartPage/cartPage";
-import CheckoutPage from "../pages/B2C/cartPage/CheckoutPage";
+import CartPage from "../pages/b2c/cartPage/cartPage";
+import CheckoutPage from "../pages/b2c/cartPage/CheckoutPage";
 
 
 export default function AppRoutes() {
