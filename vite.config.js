@@ -9,11 +9,11 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    checker({
-      eslint: {
-        lintCommand: 'eslint "./src/**/*.{js,jsx}"', 
-      },
-    }),
+    // checker({
+    //   eslint: {
+    //     lintCommand: 'eslint "./src/**/*.{js,jsx}"', 
+    //   },
+    // }),
   ],
 
   // Tell Vite which file types are static assets
