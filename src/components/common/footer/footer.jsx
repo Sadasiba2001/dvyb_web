@@ -1,5 +1,5 @@
 // components/footer/Footer.jsx
-import FooterLinks from "./FooterLinks";
+import FooterLinks from "./footerLinks";
 import FooterSocials from "./FooterSocials";
 import FooterAppLinks from "./FooterAppLinks";
 import FooterAccordion from "./FooterAccordion";
