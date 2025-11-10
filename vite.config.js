@@ -7,6 +7,7 @@ import checker from 'vite-plugin-checker';
 
 export default defineConfig({
   plugins: [
+    
     react(),
     tailwindcss(),
     // checker({
@@ -16,6 +17,9 @@ export default defineConfig({
     // }),
   ],
 
+  server: {
+    proxy: { "/api": "http://localhost:5000" },
+  },
   // Tell Vite which file types are static assets
   assetsInclude: [
     "**/*.svg",

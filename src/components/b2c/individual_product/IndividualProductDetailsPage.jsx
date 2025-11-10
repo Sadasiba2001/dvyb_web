@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+import React, { Suspense } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { useProducts } from "../../../hooks/useProducts";
 
 /**
@@ -19,6 +20,11 @@ import ProductReviewsSection from "./individual_product_components/ProductReview
 import ProductStockAndShipping from "./individual_product_components/ProductStockAndShipping";
 import { useState } from "react";
 import { cartService } from '../../../services/cartService';
+import { auth } from '../../../config';
+
+const UploadSelfieModal = React.lazy(() => import("../TryOn/UploadSelfieModal"));
+const TryOnPreviewModal = React.lazy(() => import("../TryOn/TryOnPreviewModal"));
+
 
 
 // Main product details page
@@ -30,7 +36,13 @@ const IndividualProductDetailsPage = () => {
   const { id } = useParams();
   const { products, loading, error } = useProducts();
   const [addingToCart, setAddingToCart] = useState(false);
+  const navigate = useNavigate();
   //  const user = true
+
+  const [showUploadSelfieModal, setShowUploadSelfieModal] = useState(false);
+  const [showTryOnPreviewModal, setShowTryOnPreviewModal] = useState(false);
+  const [tryOnData, setTryOnData] = useState({});
+
 
 
   /**
@@ -53,45 +65,161 @@ const IndividualProductDetailsPage = () => {
    */
   const imageUrls = product.imageUrls?.length ? product.imageUrls : ["/placeholder.jpg"];
 
+  const handleTryOnClick = () => {
+    const garmentImage = product.imageUrls?.[0];
+    if (!garmentImage) {
+      toast.error("No image available for try-on");
+      return;
+    }
 
-  const handleonBuyNow = async (event) => {
+    setTryOnData({
+      garmentImage,
+      garmentName: product.title || product.name,
+      productId: product.id,
+      selectedColors: product.selectedColors || [],
+      selectedSizes: product.selectedSizes || [],
+      fabric: product.fabric || "",
+      price: parseFloat(product.price) || 0,
+      discount: product.discount || 0,
+      imageUrls: product.imageUrls || [garmentImage],
+    });
+
+    setShowUploadSelfieModal(true); // ✅ This opens first step modal
+  };
+
+
+
+  const handleUploadSelfieNext = (data) => {
+    setShowUploadSelfieModal(false);
+    setTryOnData(prev => ({ ...prev, ...data }));
+    setShowTryOnPreviewModal(true);
+  };
+
+
+  const handleModalClose = () => {
+    setShowUploadSelfieModal(false);
+    setShowTryOnPreviewModal(false);
+    setTryOnData({});
+  };
+
+  // ✅ BUY NOW - With Static Guest Data if no Auth
+  const handleBuyNow = async (event) => {
     event.stopPropagation();
-
-    // if (!user) {
-    //   toast.error("Please log in to add items to cart!");
-    //   return;
-    // }
-
-    if (addingToCart) return;
+    setAddingToCart(true);
 
     try {
-      setAddingToCart(true);
+      const user = auth.currentUser;
 
-      const productData = {
-        name: product.name || product.title,
-        title: product.title || product.name,
-        price: parseFloat(product.price) || 0,
-        imageUrls: product.imageUrls || [],
-        selectedColors: product.selectedColors || [],
-        selectedSizes: product.selectedSizes || [],
-        fabric: product.fabric || '',
-        craft: product.craft || '',
-        description: product.description || ''
-      };
+      // If user not logged in → proceed as guest
+      if (!user) {
+        console.warn("Guest checkout initiated.");
 
-      await cartService.addToCart(product.id, productData, 1);
-      // toast.success(`${productData.name} added to cart!`);
-      // showPopup("cart", {
-      //   title: productData.name || productData.title,
-      //   image: productData.imageUrls?.[0],
-      // });
+        navigate("/checkout", {
+          state: {
+            user: {
+              name: "Guest User",
+              email: "guestuser@example.com",
+            },
+            cartItems: [
+              {
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: imageUrls[0],
+                color: product.selectedColors?.[0] || "Default",
+                size: product.selectedSizes?.[0] || "M",
+                quantity: 1,
+              },
+            ],
+          },
+        });
+
+        return;
+      }
+
+      // Logged-in user → go to checkout with real user data
+      navigate("/checkout", {
+        state: {
+          user: {
+            uid: user.uid,
+            email: user.email,
+          },
+          cartItems: [
+            {
+              id: product.id,
+              name: product.name,
+              price: product.price,
+              image: imageUrls[0],
+              color: product.selectedColors?.[0] || "Default",
+              size: product.selectedSizes?.[0] || "M",
+              quantity: 1,
+            },
+          ],
+        },
+      });
     } catch (error) {
-      console.error("Error adding to cart:", error);
-      // toast.error("Failed to add item to cart. Please try again.");
+      console.error("Error during Buy Now:", error);
     } finally {
       setAddingToCart(false);
     }
   };
+
+  // ✅ ADD TO BAG - With Static Guest Data if no Auth
+  const handleAddToBag = async (event) => {
+    event.stopPropagation();
+    setAddingToCart(true);
+
+    try {
+      const user = auth.currentUser;
+
+      // 🧩 If no user (guest)
+      if (!user) {
+        console.warn("Guest user — adding static cart data.");
+
+        // Simulate cart addition locally using sessionStorage
+        const guestCart = JSON.parse(sessionStorage.getItem("guest_cart")) || [];
+        const newItem = {
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          image: imageUrls[0],
+          color: product.selectedColors?.[0] || "Default",
+          size: product.selectedSizes?.[0] || "M",
+          quantity: 1,
+          addedAt: new Date().toISOString(),
+        };
+
+        // Avoid duplicates
+        const exists = guestCart.some((item) => item.id === product.id);
+        if (!exists) {
+          guestCart.push(newItem);
+          sessionStorage.setItem("guest_cart", JSON.stringify(guestCart));
+        }
+
+        alert("Added to bag (Guest Cart)");
+        navigate("/cart");
+        return;
+      }
+
+      // 🔐 Logged-in user (Firestore-based cart)
+      await cartService.addToCart(product.id, {
+        name: product.name,
+        price: product.price,
+        image: imageUrls[0],
+        color: product.selectedColors?.[0] || "Default",
+        size: product.selectedSizes?.[0] || "M",
+      });
+
+      console.log("Added to bag:", product.name);
+      navigate("/cart");
+    } catch (error) {
+      console.error("Error adding to cart:", error);
+    } finally {
+      setAddingToCart(false);
+    }
+  };
+
+  
 
   return (
     <div className="container mx-auto px-4 py-8 mt-22">
@@ -117,9 +245,9 @@ const IndividualProductDetailsPage = () => {
           />
           <ProductStockAndShipping />
           <ProductActionButtons
-            onAddToBag={(e) => handleonBuyNow(e)}
-            onBuyNow={() => console.log("Add to bag")}
-            onVirtualTryOn={() => console.log("Try on")}
+            onAddToBag={(e) => handleBuyNow(e)}
+            onBuyNow={(e) => handleAddToBag(e)}
+            onVirtualTryOn={handleTryOnClick}
           />
           <OfferAndShippingInfo />
           <ProductDescriptionSection product={product} />
@@ -129,6 +257,24 @@ const IndividualProductDetailsPage = () => {
           <ProductReviewsSection reviews={product?.reviews} />
         </div>
       </div>
+      <Suspense fallback={<div className="p-10 text-center">Loading Try-On...</div>}>
+        {showUploadSelfieModal && (
+          <UploadSelfieModal
+            isOpen={showUploadSelfieModal}
+            onClose={handleModalClose}
+            onNext={handleUploadSelfieNext}
+            garmentImage={tryOnData.garmentImage}
+            garmentName={tryOnData.garmentName}
+          />
+        )}
+        {showTryOnPreviewModal && (
+          <TryOnPreviewModal
+            isOpen={showTryOnPreviewModal}
+            onClose={handleModalClose}
+            tryOnData={tryOnData}
+          />
+        )}
+      </Suspense>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import WomenwearRoute from "./WomenwearRoute";
-// import IndividualProductDetailsPage from "../components/b2c/individual_product/IndividualProductDetailsPage";
 import ProductLayout from "../layout/ProductLayout";
 import MainLayout from "../layout/mainLayout";
 import { useProducts } from "../hooks/useProducts";
@@ -9,13 +8,14 @@ import Home from "../pages/b2c/homePage/homePage";
 import BlogPage from "../components/common/BlogPage/BlogPage";
 import MainBlog from "../components/common/BlogPage/MainBlog";
 import SingleMainBlog from "../components/common/BlogPage/singleBlogMain";
-// import CheckoutPage from "../components/common/Cart/Cart";
 import FaqPage from "../components/common/FAQ/FAQ";
 import PrivacyPolicy from "../components/common/PrivacyPolicy/PrivacyPolicy";
 import ReturnExchangePolicy from "../components/common/Returnpolicy/ReturnPolicy";
 import SingleBlog from "../components/common/SingleBlog/SingleBlog";
 import TermsAndConditions from "../components/common/TermsAndCondtions/TermsAndConditions";
-import CartPage from "../pages/b2c/cartPage/cartPage";
+import CartPage from "../pages/B2C/cartPage/cartPage";
+import CheckoutPage from "../pages/B2C/cartPage/CheckoutPage";
+
 
 export default function AppRoutes() {
   const { products, loading, error } = useProducts();
@@ -50,6 +50,15 @@ export default function AppRoutes() {
         element={
           <MainLayout>
             <CartPage />
+          </MainLayout>
+        }
+      />
+
+      <Route
+        path="/checkout"
+        element={
+          <MainLayout>
+            <CheckoutPage />
           </MainLayout>
         }
       />
